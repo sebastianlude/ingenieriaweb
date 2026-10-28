@@ -1,0 +1,356 @@
+/* ======== ESTILOS GENERALES ======== */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #110f16;
+    color: #ffffff;
+}
+
+/* ======== ENCABEZADO Y MENU ======== */
+
+header.mainHeader {
+    width: 80%;
+    background-color: #1a1625;
+    margin: 0 auto;
+    padding: 15px 30px;
+}
+
+header.mainHeader h2 {
+    padding: 15px 0;
+    width: 30%;
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+header.mainHeader nav {
+    width: 69%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+}
+
+header.mainHeader nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ff2a6d;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+
+    /* TRANSICION DEL MENU */
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+header.mainHeader nav a:hover {
+    background-color: #ff2a6d;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ======== SLIDER PRINCIPAL ======== */
+
+section.mainSlider {
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #ff0055, #ff5e00);
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(255, 0, 85, 0.4);
+}
+
+section.mainSlider h2 {
+    padding: 130px 0;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ======== SECCION DE NOTICIAS ======== */
+
+section.news {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #1a1625;
+}
+
+section.news .newsItem {
+    width: 27%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #241e33;
+    color: #ffffff;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-top: 5px solid #05d9e8;
+
+    /* TRANSICION DE LAS NOTICIAS */
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+section.news .newsItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(5, 217, 232, 0.2);
+}
+
+section.news .newsItem h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+section.news .newsItem p {
+    color: #b1afcd;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+section.news .newsItem img {
+    max-width: 100%;
+    height: auto;
+}
+
+section.news .newsItem button {
+    background-color: #ff2a6d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+
+    /* TRANSICION DEL BOTON */
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+section.news .newsItem button:hover {
+    background-color: #d80043;
+    transform: scale(1.05);
+}
+
+/* ======== PIE DE PAGINA ======== */
+
+footer.mainFooter {
+    background-color: #0d0b12;
+    color: #8c88ad;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.9rem;
+}
+
+/* ======== MEDIA QUERY PARA TABLETS ======== */
+
+@media screen and (max-width: 1024px) {
+
+    header.mainHeader,
+    section.mainSlider,
+    section.news {
+        width: 90%;
+    }
+
+    header.mainHeader {
+        padding: 15px;
+    }
+
+    header.mainHeader h2 {
+        width: 29%;
+        font-size: 1.3rem;
+    }
+
+    header.mainHeader nav {
+        width: 70%;
+    }
+
+    header.mainHeader nav a {
+        padding: 8px 5px;
+        font-size: 0.9rem;
+    }
+
+    section.news .newsItem {
+        width: 43%;
+    }
+
+    section.mainSlider h2 {
+        padding: 100px 10px;
+        font-size: 2rem;
+    }
+}
+
+/* ======== MEDIA QUERY PARA CELULARES ======== */
+
+@media screen and (max-width: 600px) {
+
+    header.mainHeader,
+    section.mainSlider,
+    section.news {
+        width: 100%;
+    }
+
+    header.mainHeader {
+        padding: 15px;
+        text-align: center;
+    }
+
+    header.mainHeader h2 {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    header.mainHeader nav {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    header.mainHeader nav a {
+        padding: 10px 8px;
+        margin: 3px;
+        font-size: 0.85rem;
+    }
+
+    section.mainSlider h2 {
+        padding: 75px 10px;
+        font-size: 1.7rem;
+    }
+
+    section.news {
+        padding: 20px 10px;
+    }
+
+    section.news .newsItem {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    footer.mainFooter {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* -------------- Estilos del login de la app --------------*/
+
+body.bodylogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('IMG/Bg.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.wrapper{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-10px);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 10px;
+}
+
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    color: #333;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.wrapper .register-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
